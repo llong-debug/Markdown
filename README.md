@@ -248,11 +248,11 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 | 文本超链接                                         |                   `[百度](www.baidu.com)`                    |                    [百度](www.baidu.com)                     |
 | 文本超链接                                         |              `[知乎](www.zhihu.com '悬停显示')`              |               [知乎](www.zhihu.com '悬停显示')               |
 | 文本超链接(自定义锚点)                             |                     `[知乎][zhihu-site]`                     |                      [知乎][zhihu-site]                      |
-| 嵌入图片链接（图片在本地）                         |                  `![zhihu](img\zhihu.png)`                   |                   ![zhihu](img\zhihu.png)                    |
+| 嵌入图片链接（图片在本地）                         |                  `![zhihu](img/zhihu.png)`                   |                   ![zhihu](img\zhihu.png)                    |
 | 嵌入图片链接（图片在因特网上）                     | `![baidu](http://www.baidu.com/img/bdlogo.gif "悬停显示百度logo")` | ![baidu](http://www.baidu.com/img/bdlogo.gif "悬停显示百度logo") |
 | 嵌入图片链接（自定义锚点）                         |                    `![baidu][baidu-logo]`                    |                       ![][baidu-logo]                        |
 | 图片超链接                                         |       **本质是超链接，只是其中表示部分表示为图片而已**       |                                                              |
-| 表示部分用 嵌入图片链接 表示                       |   `[![zhihu](img\zhihu.png)](www.zhihu.com '图片外链接')`    |     [![zhihu](img\zhihu.png)](www.zhihu.com '悬停显示')      |
+| 表示部分用 嵌入图片链接 表示                       |   `[![zhihu](img/zhihu.png)](www.zhihu.com '图片外链接')`    |     [![zhihu](img\zhihu.png)](www.zhihu.com '悬停显示')      |
 | 表示部分：用图片的自定义锚点；链接部分：自定义锚点 |               `[![][baidu-logo]][baidu-site]`                |                [![][baidu-logo]][baidu-site]                 |
 
 自定义锚点
@@ -311,9 +311,11 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
 # 时鸣春涧中。
 ```
 
-### 2.10 补充
+### 2.10 斜杠
 
 反斜杠 `\`起转义作用，使标记符号成为普通符号
+
+github中，图片链接只支持 右斜杠`/`
 
 
 
@@ -328,13 +330,13 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
 
 首先，你需要打开偏好设置，额外勾选非常强大的功能
 
-![](img\gouxuan.jpg)
+![](img/gouxuan.jpg)
 
 
 
 #### 3.1 上标与下标
 
-![](img\sxbiao.jpg)
+![](img/sxbiao.jpg)
 
 #### 3.2 表格
 
@@ -342,6 +344,6 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
 
 #### 3.3 公式
 
-![](img\formula.jpg)
+![](img/formula.jpg)
 
 ![](img\formula_key.jpg)
