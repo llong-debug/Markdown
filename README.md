@@ -2,7 +2,7 @@
 
 ​	首次接触markdown，我写这篇文档的初衷是为了好好记录下自己学习的过程。
 
-​	编辑器：推荐Typora
+​	编辑器：推荐[Typora](https://www.typora.io/)，开源免费，简洁美观，与Markdown的简洁风格浑然一体。
 
 ​	在写本篇文章前我参考了两位前人的github，然后将自己的笔记与思考整理了出来。
 
@@ -16,7 +16,7 @@
 
 **Markdown**是一种轻量级**标记语言**，它以**纯文本**形式（易读、易写、易更改）编写文档，对于图片，图表、数学公式、代码都有支持，并最终可以以HTML形式发布（现在由于编辑器的强大，已经支持PDF、WORD、RTF、Latex、Image等多种形式）。
 
-当前许多网站都广泛使用Markdown来撰写帮助文档或是用于[论坛](https://zh.wikipedia.org/wiki/网络论坛)上发表消息。如[GitHub](https://zh.wikipedia.org/wiki/GitHub)、[Reddit](https://zh.wikipedia.org/wiki/Reddit)、[Diaspora](https://zh.wikipedia.org/wiki/Diaspora)、[Stack Exchange](https://zh.wikipedia.org/wiki/Stack_Exchange)、[OpenStreetMap](https://zh.wikipedia.org/wiki/OpenStreetMap) 、[SourceForge](https://zh.wikipedia.org/wiki/SourceForge)、[简书](https://zh.wikipedia.org/wiki/简书)等，甚至还能被使用来撰写[电子书](https://zh.wikipedia.org/wiki/電子書)。
+当前许多网站都广泛使用Markdown来撰写帮助文档或是用于论坛上发表消息。国内的如：知乎、CSDN、简书、印象笔记等等一系列可编辑文章并发布的平台，甚至还能被使用来撰写电子书。
 
 ### 1.2 为什么使用它？
 
@@ -27,7 +27,19 @@
 * **支持导出多种文件格式**，MD、PDF、WORD、RTF、Latex、Image等等
 * Word的替代好手，在没用过md的人面前用起来真是高大上，哈哈哈
 
+### 1.3 有何缺点
+
+Markdown有一个很令人头疼的问题就是它的标准不统一，不能完全统一。
+
+但常见的语法基本一致，少数的要需要你去了解该平台或者编辑器是否支持该语法
+
+
+
 # 2. 正文
+
+由于github与Typora编辑器所支持的语法有不同，我下面会先介绍他们共有语法
+
+然后会在最后面介绍Typora所单独支持的语法（采用贴图的形式）
 
 ### 2.1 标题
 
@@ -55,10 +67,6 @@
 | `***粗斜体***`或者`___粗斜体___` | ***粗斜体***  ___粗斜体___ |
 |         `<u>下划线</u>`          |       <u>下划线</u>        |
 |           `~~删除线~~`           |         ~~删除线~~         |
-|             `^上标^`             |         这是^上标^         |
-|             `~下标~`             |         这是~下标~         |
-
-
 
 ### 2.3 列表
 
@@ -121,17 +129,17 @@
 
 ### 2.4 表格
 
-其实如果用编辑器的话，打了第一行后，整个表格就自动跳出来了，还可以手动选择行列数
+如果用编辑器的话，打了第一行后，整个表格就自动跳出来了，还可以手动选择行列数，其实非常方便
 
 ```
 | MON  | TUE  | WED  |
 | :--: | :--- | ---: |
-| 居中 | 居左 | 居右 |
+| 吃饭 | 睡觉 | 敲代码 |
 ```
 
-| MON  | TUE  |  WED |
-| :--: | :--- | ---: |
-| 居中 | 居左 | 居右 |
+| MON  | TUE  |    WED |
+| :--: | :--- | -----: |
+| 吃饭 | 睡觉 | 敲代码 |
 
 ### 2.5 引用
 
@@ -152,15 +160,14 @@
 
 ### 2.6 段落
 
-#### 2.6.1 代码与公式
+#### 2.6.1 代码
 
 |          语法          |         效果         |
 | :--------------------: | :------------------: |
 |   \` hello world \`    |    `hello world`     |
 | 按下 \`Enter\`键表回车 | 按下 `Enter`键表回车 |
-|      \$y=\sin x\$      |      $y=\sin x$      |
 
-#### 2.6.2 代码块、公式块
+#### 2.6.2 代码块
 
 文本块（不指定编程语言的代码块）
 
@@ -194,19 +201,7 @@ print('hello world')
 print('hello world')
 ```
 
-公式块，支持LaTex
 
-```
-$$
-导数定义: 
-f'({{x}_{0}})=\underset{\Delta x\to 0}{\mathop{\lim }}\,\frac{f({{x}_{0}}+\Delta x)-f({{x}_{0}})}{\Delta x}
-$$
-```
-
-$$
-导数定义: 
-f'({{x}_{0}})=\underset{\Delta x\to 0}{\mathop{\lim }}\,\frac{f({{x}_{0}}+\Delta x)-f({{x}_{0}})}{\Delta x}
-$$
 
 ### 2.7 链接
 
@@ -255,21 +250,18 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 | 文本超链接(自定义锚点)                             |                     `[知乎][zhihu-site]`                     |                      [知乎][zhihu-site]                      |
 | 嵌入图片链接（图片在本地）                         |                  `![zhihu](img\zhihu.png)`                   |                   ![zhihu](img\zhihu.png)                    |
 | 嵌入图片链接（图片在因特网上）                     | `![baidu](http://www.baidu.com/img/bdlogo.gif "悬停显示百度logo")` | ![baidu](http://www.baidu.com/img/bdlogo.gif "悬停显示百度logo") |
-| 嵌入图片链接（自定义锚点）                         |                      `![][weibo-logo]`                       |                       ![][weibo-logo]                        |
-| 嵌入图片链接（自定义锚点）                         |                    `![baidu][baidu-logo]`                    |                     ![baidu][baidu-logo]                     |
+| 嵌入图片链接（自定义锚点）                         |                    `![baidu][baidu-logo]`                    |                       ![][baidu-logo]                        |
 | 图片超链接                                         |       **本质是超链接，只是其中表示部分表示为图片而已**       |                                                              |
 | 表示部分用 嵌入图片链接 表示                       |   `[![zhihu](img\zhihu.png)](www.zhihu.com '图片外链接')`    |     [![zhihu](img\zhihu.png)](www.zhihu.com '悬停显示')      |
-| 表示部分：用图片的自定义锚点；链接部分：自定义锚点 |                `[![][csdn-logo]][csdn-site]`                 |                 [![][csdn-logo]][csdn-site]                  |
+| 表示部分：用图片的自定义锚点；链接部分：自定义锚点 |               `[![][baidu-logo]][baidu-site]`                |                [![][baidu-logo]][baidu-site]                 |
 
 自定义锚点
 
 ```
-这里的自定义锚点在github页面中不会显示出来
+这里的自定义锚点在github页面中不会显示出来，实际上它在下方两条分割线的中间
 [baidu-logo]:http://www.baidu.com/img/bdlogo.gif "百度logo"
-[weibo-logo]:/img/weibo.png "微博logo"
-[csdn-logo]:/img/csdn.png "This is csdn logo"
-[zhihu-site]:www.zhihu.com "知乎网站"
-[csdn-site]:http://blog.csdn.net "CSDN网站"
+[zhihu-site]:www.zhihu.com "知乎"
+[baidu-site]:http://www.baidu.com "百度"
 ```
 
 
@@ -279,14 +271,10 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 
 
 [baidu-logo]:http://www.baidu.com/img/bdlogo.gif "百度logo"
-[weibo-logo]:/img/weibo.png "微博logo"
-[csdn-logo]:/img/csdn.png "This is csdn logo"
-[zhihu-site]:www.zhihu.com "知乎网站网站"
-[csdn-site]:http://blog.csdn.net "CSDN"
+[zhihu-site]:www.zhihu.com "知乎"
+[baidu-site]:http://www.baidu.com "百度"
 
 ---
-
-
 
 
 
@@ -300,7 +288,7 @@ Github的Markdown语法支持添加emoji表情，输入不同的符号码（两�
 
 具体每一个表情的符号码，可以查询GitHub的官方网页[http://www.emoji-cheat-sheet.com](http://www.emoji-cheat-sheet.com)。
 
-但是这个网页每次都打开**奇慢**。。所以我整理到了本repo中，大家可以直接在此查看[emoji](./emoji.md)。
+这里我是拷贝的转载文档，大家可以直接在此查看[emoji](./emoji.md)。
 
 ### 2.9 diff语法
 
@@ -327,3 +315,33 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
 
 反斜杠 `\`起转义作用，使标记符号成为普通符号
 
+
+
+### 3. Typora额外支持语法
+
+**优点**
+
+* 轻量，简洁美观
+* **快捷键操作**，很多功能都支持快捷键
+* 支持安装插件，实现个性化
+* 支持LaTex公式，与流程图
+
+首先，你需要打开偏好设置，额外勾选非常强大的功能
+
+![](img\gouxuan.jpg)
+
+
+
+#### 3.1 上标与下标
+
+![](img\sxbiao.jpg)
+
+#### 3.2 表格
+
+![](img/table.jpg)
+
+#### 3.3 公式
+
+![](img\formula.jpg)
+
+![](img\formula_key.jpg)
